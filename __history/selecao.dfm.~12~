@@ -1,0 +1,82 @@
+object frm_selecao: Tfrm_selecao
+  Left = 0
+  Top = 0
+  Caption = 'Sele'#231#227'o'
+  ClientHeight = 433
+  ClientWidth = 622
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  TextHeight = 15
+  object Label2: TLabel
+    Left = 92
+    Top = 32
+    Width = 247
+    Height = 28
+    Caption = 'Quantos dias ser'#225' a viagem?'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -20
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
+  end
+  object UpDown1: TUpDown
+    Left = 479
+    Top = 37
+    Width = 20
+    Height = 23
+    Associate = Edit1
+    TabOrder = 0
+  end
+  object Edit1: TEdit
+    Left = 358
+    Top = 37
+    Width = 121
+    Height = 23
+    Alignment = taCenter
+    TabOrder = 1
+    Text = '0'
+  end
+  object Button1: TButton
+    Left = 200
+    Top = 336
+    Width = 177
+    Height = 65
+    Caption = 'Confirmar compra'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -20
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 2
+  end
+  object CheckBox1: TCheckBox
+    Left = 118
+    Top = 168
+    Width = 405
+    Height = 73
+    Caption = 'x'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -20
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 3
+    WordWrap = True
+  end
+  object Button2: TButton
+    Left = 240
+    Top = 104
+    Width = 99
+    Height = 25
+    Caption = 'Consultar extras'
+    TabOrder = 4
+    OnClick = Button2Click
+  end
+end

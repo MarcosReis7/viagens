@@ -1,0 +1,114 @@
+unit selecao;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ComCtrls;
+
+type
+  Tfrm_selecao = class(TForm)
+    UpDown1: TUpDown;
+    Edit1: TEdit;
+    Label2: TLabel;
+    Button1: TButton;
+    CheckBox1: TCheckBox;
+    Button2: TButton;
+    procedure Button2Click(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
+  private
+
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frm_selecao: Tfrm_selecao;
+
+
+implementation
+
+{$R *.dfm}
+
+uses Home;
+
+procedure Tfrm_selecao.Button1Click(Sender: TObject);
+  var mensagem, dias, pais, hotel, extra : string;
+  var valor : integer;
+begin
+
+  if frm_home.RadioButton1.Checked then pais := 'Chile';
+  if frm_home.RadioButton2.Checked then pais := 'EUA';
+  if frm_home.RadioButton3.Checked then pais := 'Japão';
+
+
+  if frm_home.RadioButton4.Checked then
+  begin
+  hotel := '1';
+  valor := 350*dias;
+  end;
+  if frm_home.RadioButton5.Checked then
+  begin
+  hotel := '2';
+  valor := 425;
+  end;
+  if frm_home.RadioButton6.Checked then
+  begin
+  hotel := '3';
+  valor := 500;
+  end;
+
+
+  if frm_home.RadioButton7.Checked then
+  begin
+  hotel := '1';
+  valor := valor+1;
+  end;
+  if frm_home.RadioButton8.Checked then
+  begin
+  hotel := '2';
+  valor := valor+1;
+  end;
+  if frm_home.RadioButton9.Checked then
+  begin
+  hotel := '3';
+  valor := valor+1;
+  end;
+
+
+  if frm_home.RadioButton10.Checked then
+  begin
+  hotel := '1';
+  valor := valor+1;
+  end;
+  if frm_home.RadioButton11.Checked then
+  begin
+  hotel := '2';
+  valor := valor+1;
+  end;
+  if frm_home.RadioButton12.Checked then
+  begin
+  hotel := '3';
+  valor := valor+1;
+  end;
+
+  dias := Edit1.Text;
+
+
+
+  mensagem := 'O Pais destino é '+pais+' o hotel selecionado foi o Hotel '+hotel+' num total de '+dias+' dias hospedados, '+extra+' num total de: R$'+IntToStr(valor);
+  ShowMessage(mensagem);
+end;
+
+
+procedure Tfrm_selecao.Button2Click(Sender: TObject);
+begin
+
+  if frm_home.RadioButton1.Checked then CheckBox1.Caption := 'Deseja adicionar um passeio guiado por Santiago por +R$300,00?';
+  if frm_home.RadioButton2.Checked then CheckBox1.Caption := 'Deseja adicionar ingressos ao Parque Disney por +R$600,00?';
+  if frm_home.RadioButton3.Checked then CheckBox1.Caption := 'Deseja adicionar uma trilha guiada pelo Monte Fuji por +R$400,00?';
+  Checkbox1.Visible := true;
+end;
+
+end.
